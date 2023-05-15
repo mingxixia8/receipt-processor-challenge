@@ -5,7 +5,7 @@ FROM openjdk:17-jdk
 EXPOSE 8080
 
 # The application's .jar file
-ARG JAR_FILE=target/receipt-processor-challenge-0.0.1-SNAPSHOT.jar
+ARG JAR_FILE=receipt-processor-challenge-0.0.1-SNAPSHOT.jar
 
 
 # Add the application's .jar to the container
