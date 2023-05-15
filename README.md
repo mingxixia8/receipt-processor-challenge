@@ -1,5 +1,7 @@
 <h1>Receipt Processor Challenge</h1>
-Receipt Processor Challenge is a RESTful API developed using Java17 and Spring Boot 3.0.6. It mainly provides two functions: processing receipts and calculating points, and obtaining points by receipt ID.
+Receipt Processor Challenge is a RESTful API developed using `Java17` and `Spring Boot 3.0.6`. It primarily delivers two essential functionalities: the processing of receipts and computation of associated points, and the ability to fetch points via a given receipt ID.
+
+This program comes equipped with unit tests, utilizing Junit4.2 and mockito, for ensuring code quality and reliability. Furthermore, a Dockerfile is included, enabling anyone with Docker installed to effortlessly execute the program, thereby eliminating the need for any additional software installations.
 
 <h2>Development Requirements</h2>
 
