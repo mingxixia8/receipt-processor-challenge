@@ -2,6 +2,7 @@
 Receipt Processor Challenge is a RESTful API developed using Java17 and Spring Boot 3.0.6. It mainly provides two functions: processing receipts and calculating points, and obtaining points by receipt ID.
 
 <h2>Development Requirements</h2>
+<li>Java 17</li>
 <li>Docker(must)</li>
 <li>Postman(optional)</li>
 
@@ -37,30 +38,41 @@ The application provides the following endpoints:
 <h2>Build&Run</h2>
 <h3>Using Docker to build and run</h3>
 1.Clone the repository:
+
 ```
-git clone https://github.com/yourusername/receipt-processor-challenge.git
+git clone https://github.com/mingxixia8/receipt-processor-challenge.git
 ```
+
 2.Change into the directory:
+
 ```
 cd receipt-processor-challenge
 ```
-3.Using Docker to build the program:
+3.Using Docker to build the program:(make sure you started the docker desktop)
+
 ```
 docker build -t receipt-processor-challenge .
 ```
+
 4.Run docker container:
 
 Note: before run this command, make sure your 8080 port is available.
+
 ```
 docker run -p 8080:8080 receipt-processor-challenge
 ```
+
 5.Now you can start to test apis
 
 
 <h2>Test APIs </h2>
+
 There's two ways to test apis by yourself: using `curl` or Postman
+
 <h3>Using `curl` command in your terminal</h3>
-Open a new terminal window and cd to ~/receipt-processor-challenge
+
+Open a new terminal window and cd to `~/receipt-processor-challenge`
+
 ```
 curl -X POST -H "Content-Type: application/json" -d 
 '{
@@ -88,7 +100,9 @@ curl -X POST -H "Content-Type: application/json" -d
   "total": "35.35"
 }' http://localhost:8080/receipts/process
 ```
-Then you will get an `{id:..}` in the terminal, copy the id to replace `{id}` in the following command
+
+Then you will get an `{id:..}` in the terminal, copy the id to replace `{id}` in the following command:
+
 ```
 curl -X GET http://localhost:8080/receipts/{id}/points
 ```
@@ -125,6 +139,7 @@ Then click `Body` -> `raw` -> `JSON`, and input:
   "total": "35.35"
 }
 ```
+
 Or you can input your customized text with the same JSON format.
 
 Then click `Send` , you will get `{id:......}` in the Response.
@@ -133,7 +148,7 @@ Then click `Send` , you will get `{id:......}` in the Response.
 copy the id that you got from `POST` response and replace `{id}` in the URL, then click `Send`.
 
 For example:
-```http://localhost:8080/receipts/82e5abd4-5f44-4c0b-abb2-2d173f546bcd/points```
+`http://localhost:8080/receipts/82e5abd4-5f44-4c0b-abb2-2d173f546bcd/points`
 
 
 
