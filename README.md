@@ -2,7 +2,7 @@
 Receipt Processor Challenge is a RESTful API developed using Java17 and Spring Boot 3.0.6. It mainly provides two functions: processing receipts and calculating points, and obtaining points by receipt ID.
 
 <h2>Development Requirements</h2>
-<li>Java 17</li>
+
 <li>Docker(must)</li>
 <li>Postman(optional)</li>
 
@@ -109,6 +109,7 @@ curl -X GET http://localhost:8080/receipts/{id}/points
 
 <h3>Using Postman (if you installed already)</h3>
 Open Postman and click `+` to create a new HTTP request
+
 
 1.Choose `POST` and enter `http://localhost:8080/receipts/process` in URL box,
 Then click `Body` -> `raw` -> `JSON`, and input:
