@@ -77,8 +77,7 @@ There's two ways to test apis by yourself: using `curl` or Postman
 Open a new terminal window and cd to `~/receipt-processor-challenge`
 
 ```
-curl -X POST -H "Content-Type: application/json" -d 
-'{
+curl -X POST -H "Content-Type: application/json" -d '{
   "retailer": "Target",
   "purchaseDate": "2022-01-01",
   "purchaseTime": "13:01",
